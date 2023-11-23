@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_above="@id/bottomNavigation">
+
+</FrameLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="0dp"
+        app:strokeWidth="0dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_alignParentTop="true" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/home"
+                    android:layout_width="62dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:button="@drawable/homeselector"
+                    android:checked="true"
+                    android:layout_alignParentStart="true"
+                    android:textColorLink="#000000" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/search"
+                    android:layout_width="62dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/home"
+                    android:layout_marginStart="20dp"
+                    android:button="@drawable/searchselector" />
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/search"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/add" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/reels"
+                    android:layout_width="62dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/add"
+                    android:layout_marginStart="10dp"
+                    android:button="@drawable/reelsselector" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/profile"
+                    android:layout_width="62dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/reels"
+                    android:layout_alignParentEnd="true"
+                    android:button="@drawable/profileselector" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
